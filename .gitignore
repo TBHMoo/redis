@@ -4,6 +4,10 @@
 # Log file
 *.log
 
+# maven file
+^Maven_*.xml
+.idea
+
 # BlueJ files
 *.ctxt
 
