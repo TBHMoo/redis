@@ -23,4 +23,6 @@ public interface RedisRepository {
     List<String> mget(Collection<String> list);
 
 
+
+
 }
