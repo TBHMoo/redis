@@ -16,8 +16,6 @@ class RedisApplicationTests {
 	@Autowired
 	private RedisRepository redisRepository;
 
-	@Autowired
-	private RedisTemplate redisTemplate;
 	@Test
 	void contextLoads() {
 	}
@@ -25,7 +23,7 @@ class RedisApplicationTests {
 	@Test
 	@Rollback(false)
 	void redisget(){
-		String key = "test";
+		String key = "keySff1";
 		String v = redisRepository.get(key);
 		System.out.println(v);
 	}
@@ -39,16 +37,6 @@ class RedisApplicationTests {
 		redisRepository.setIfAbsent(key,value);
 		Object v = redisRepository.get(key);
 		System.out.println(v);
-	}
-
-	@Test
-	@Rollback(false)
-	void keys(){
-//		setIfAbsent();
-
-		Set<String>  set = redisTemplate.keys("*");
-		for (String temp:set)
-		System.out.println(set);
 	}
 
 
